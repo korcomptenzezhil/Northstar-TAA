@@ -1370,3 +1370,356 @@ a:hover {
     transition: none;
   }
 }
+
+/* ==========================================================
+   Course detail page (aruba.html)
+   Layout uses only flow, flexbox and the Bootstrap grid –
+   no positioning properties.
+   ========================================================== */
+:root {
+  --course-orange: #c4471b;
+  --course-navy: #002c53;
+  --course-blue: #407cd1;
+  --course-peach-soft: #fff0de;
+  --course-divider: #d9e3e3;
+}
+
+.course-container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.course-container-wide {
+  max-width: 1288px;
+}
+
+/* ---------- Hero ---------- */
+.course-hero {
+  min-height: 706px;
+  display: flex;
+  align-items: center;
+  padding: 120px 0;
+  background:
+    linear-gradient(180deg, rgba(5, 18, 60, 0.35), rgba(5, 18, 60, 0.5)),
+    url("../images/hero.jpg") center / cover no-repeat;
+}
+
+.course-hero .container-wide {
+  width: 100%;
+}
+
+.course-hero-logo {
+  display: block;
+  width: 320px;
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.course-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.btn-course-hero {
+  margin: 10px;
+  padding: 0.55rem 1.25rem;
+  border: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #2b3236;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.btn-course-hero:hover,
+.btn-course-hero:focus {
+  background: #f1f3f4;
+  color: var(--taa-teal-dark);
+}
+
+.btn-course-hero-primary {
+  background: var(--taa-blue);
+  color: #fff;
+}
+
+.btn-course-hero-primary:hover,
+.btn-course-hero-primary:focus {
+  background: #144c7c;
+  color: #fff;
+}
+
+/* ---------- Intro ---------- */
+.course-intro {
+  padding: 64px 0 72px;
+}
+
+.course-title {
+  color: var(--course-orange);
+  font-size: 3.3rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin-bottom: 44px;
+}
+
+.course-intro p {
+  color: #2f3538;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+.btn-course-navy {
+  background: var(--course-navy);
+  color: #fff;
+  border-radius: 4px;
+  padding: 0.6rem 1.6rem;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.btn-course-navy:hover,
+.btn-course-navy:focus {
+  background: #00427a;
+  color: #fff;
+}
+
+.course-thumbs {
+  margin-top: 64px;
+}
+
+.course-thumb {
+  display: block;
+  margin: 0 auto 24px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
+
+/* ---------- Benefits + Learn ---------- */
+.course-details {
+  padding: 0 0 80px;
+}
+
+.benefits-card {
+  height: 100%;
+  color: #fff;
+  border-radius: 24px;
+  padding: 36px 36px 44px;
+  /* peach circle in the top-right corner, drawn as part of the background */
+  background:
+    radial-gradient(circle at 100% 0, #f2c58b 0, #f2c58b 107px, rgba(242, 197, 139, 0) 108px),
+    var(--taa-teal);
+  box-shadow: 0 12px 28px rgba(0, 45, 54, 0.18);
+}
+
+.benefits-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+  background: var(--taa-peach);
+  color: var(--taa-teal-dark);
+  margin-bottom: 18px;
+}
+
+.benefits-card h2 {
+  font-size: 2.35rem;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+.benefits-rule {
+  width: 56px;
+  height: 3px;
+  margin: 0 0 30px;
+  border: 0;
+  background: var(--taa-peach);
+}
+
+.benefits-lead {
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.6;
+  margin-bottom: 22px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.benefits-list li {
+  display: flex;
+  font-style: italic;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.benefits-list li::before {
+  content: "";
+  flex: 0 0 7px;
+  height: 7px;
+  margin: 0.65em 13px 0 0;
+  border-radius: 50%;
+  background: var(--taa-peach);
+}
+
+.benefits-list a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.benefits-list a:hover {
+  color: var(--taa-peach);
+}
+
+.benefits-list-boxed {
+  background: var(--taa-teal-soft);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 18px 20px 6px;
+  margin-bottom: 26px;
+}
+
+.benefits-list-boxed li {
+  font-size: 0.85rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.benefits-list-boxed li::before {
+  margin-top: 0.75em;
+}
+
+.learn-card {
+  height: 100%;
+  background: #fff;
+  border: 1px solid #eef2f2;
+  border-radius: 24px;
+  padding: 36px 40px 36px;
+  box-shadow: 0 12px 28px rgba(0, 45, 54, 0.08);
+}
+
+.learn-card h2 {
+  color: var(--taa-teal);
+  font-size: 2.55rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+
+.learn-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 36px;
+}
+
+.learn-list li {
+  display: flex;
+  align-items: flex-start;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--course-divider);
+}
+
+.learn-list li:first-child {
+  padding-top: 6px;
+}
+
+.learn-num {
+  flex: 0 0 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--course-peach-soft);
+  color: var(--taa-teal);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.learn-list p {
+  margin: 0;
+  color: #2f3538;
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+  padding-top: 6px;
+}
+
+.btn-course-blue {
+  display: inline-flex;
+  align-items: center;
+  background: var(--course-blue);
+  color: #fff;
+  border-radius: 6px;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.btn-course-blue svg {
+  margin-left: 12px;
+}
+
+.btn-course-blue:hover,
+.btn-course-blue:focus {
+  background: #2f69bb;
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .course-hero {
+    min-height: 480px;
+    padding: 80px 0;
+  }
+
+  .course-title {
+    font-size: 2.6rem;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .course-hero {
+    min-height: 380px;
+    padding: 56px 0;
+  }
+
+  .course-hero-logo {
+    width: 220px;
+    margin-bottom: 28px;
+  }
+
+  .btn-course-hero {
+    font-size: 0.9rem;
+  }
+
+  .course-title {
+    font-size: 2.1rem;
+  }
+
+  .benefits-card,
+  .learn-card {
+    padding: 28px 22px;
+    border-radius: 18px;
+  }
+
+  .benefits-card h2 {
+    font-size: 2rem;
+  }
+
+  .learn-card h2 {
+    font-size: 2rem;
+  }
+}
