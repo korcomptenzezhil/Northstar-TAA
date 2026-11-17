@@ -34,125 +34,115 @@
   // straight from disk, where browsers block AJAX on file:// URLs).
   var FALLBACK_COURSES = [
     {
-      id: "xcaret-expert",
-      title: "Xcaret Expert Program",
-      categories: ["Promotions", "New", "Hotel/Resort"],
-      language: "en",
-      isNew: true,
-      logo: "images/logo-xcaret.png",
-      logoAlt: "Xcaret",
-      url: "#",
-      description:
-        "Become a Xcaret Xpert and give your clients a seamless tropical vacation like no other by learning how to sell the parks and resorts together as the perfect incarnation of a dream getaway!",
+      "id": "xcaret-expert",
+      "title": "Xcaret Expert Program",
+      "categories": [
+        "Promotions",
+        "New",
+        "Hotel/Resort"
+      ],
+      "language": "en",
+      "isNew": true,
+      "logo": "images/logo-xcaret.png",
+      "logoAlt": "Xcaret",
+      "url": "#",
+      "description": "Become a Xcaret Xpert and give your clients a seamless tropical vacation like no other by learning how to sell the parks and resorts together as the perfect incarnation of a dream getaway!"
     },
     {
-      id: "airfrance-klm-en",
-      title: "Air France and KLM Specialist Program",
-      categories: ["Airlines"],
-      language: "en",
-      logo: "images/logo-airfrance-klm.png",
-      logoAlt: "Air France KLM",
-      url: "#",
-      description:
-        "Learn about the distinct offerings that define both these legendary airlines and the benefits they provide you and your clients — whether your clients are looking for luxury, affordable comfort or customized personal service.",
-      isNew: false,
+      "id": "airfrance-klm-en",
+      "title": "Air France and KLM Specialist Program",
+      "categories": [
+        "Airlines"
+      ],
+      "language": "en",
+      "logo": "images/logo-airfrance-klm.png",
+      "logoAlt": "Air France KLM",
+      "url": "#",
+      "description": "Learn about the distinct offerings that define both these legendary airlines and the benefits they provide you and your clients — whether your clients are looking for luxury, affordable comfort or customized personal service.",
+      "isNew": false
     },
     {
-      id: "airfrance-klm-fr",
-      title: "Le programme spécialiste Air France et KLM",
-      categories: ["Airlines"],
-      language: "fr",
-      logo: "images/logo-airfrance-klm.png",
-      logoAlt: "Air France KLM",
-      url: "#",
-      description:
-        "Que vos clients recherchent le luxe, un confort abordable ou un service personnalisé, vous apprendrez à tirer parti des nombreuses options proposées par Air France et KLM pour trouver la solution qui leur convient, quelle que soit leur destination.",
-      isNew: false,
+      "id": "airfrance-klm-fr",
+      "title": "Le programme spécialiste Air France et KLM",
+      "categories": [
+        "Airlines"
+      ],
+      "language": "fr",
+      "logo": "images/logo-airfrance-klm.png",
+      "logoAlt": "Air France KLM",
+      "url": "#",
+      "description": "Que vos clients recherchent le luxe, un confort abordable ou un service personnalisé, vous apprendrez à tirer parti des nombreuses options proposées par Air France et KLM pour trouver la solution qui leur convient, quelle que soit leur destination.",
+      "isNew": false
     },
     {
-      id: "allianz",
-      title: "Allianz Travel Protection Partners",
-      categories: ["Services"],
-      language: "en",
-      logo: "images/logo-allianz.jpg",
-      logoAlt: "Allianz",
-      url: "#",
-      description:
-        "Offering travel insurance is an important part of the travel sales process, because providing protection for those hard-earned vacations helps you deliver the best value and highest level of service to your customers.",
-      isNew: false,
+      "id": "allianz",
+      "title": "Allianz Travel Protection Partners",
+      "categories": [
+        "Services"
+      ],
+      "language": "en",
+      "logo": "images/logo-allianz.jpg",
+      "logoAlt": "Allianz",
+      "url": "#",
+      "description": "Offering travel insurance is an important part of the travel sales process, because providing protection for those hard-earned vacations helps you deliver the best value and highest level of service to your customers.",
+      "isNew": false
     },
     {
-      id: "visit-algarve",
-      title: "Visit Algarve Specialist Program",
-      categories: ["Destination"],
-      language: "en",
-      logo: "images/logo-visit-algarve.png",
-      logoAlt: "Visit Algarve Portugal",
-      url: "#",
-      description:
-        "Introduce Portugal’s beautiful Algarve to clients who would love the luxurious feel of a European beach escape!",
-      isNew: false,
+      "id": "visit-algarve",
+      "title": "Visit Algarve Specialist Program",
+      "categories": [
+        "Destination"
+      ],
+      "language": "en",
+      "logo": "images/logo-visit-algarve.png",
+      "logoAlt": "Visit Algarve Portugal",
+      "url": "#",
+      "description": "Introduce Portugal’s beautiful Algarve to clients who would love the luxurious feel of a European beach escape!",
+      "isNew": false
     },
     {
-      id: "arizona",
-      title: "Arizona Specialist Program",
-      categories: ["Destination"],
-      language: "en",
-      logo: "images/logo-arizona.jpg",
-      logoAlt: "Arizona",
-      url: "#",
-      description:
-        "Arizona’s landscapes are brimming with natural beauty, adventure, history, wellness, art and culinary flavor. Enroll to help your clients discover the best of what the Grand Canyon State has to offer!",
-      isNew: false,
+      "id": "arizona",
+      "title": "Arizona Specialist Program",
+      "categories": [
+        "Destination"
+      ],
+      "language": "en",
+      "logo": "images/logo-arizona.jpg",
+      "logoAlt": "Arizona",
+      "url": "#",
+      "description": "Arizona’s landscapes are brimming with natural beauty, adventure, history, wellness, art and culinary flavor. Enroll to help your clients discover the best of what the Grand Canyon State has to offer!",
+      "isNew": false
     },
     {
-      id: "aruba",
-      title: "Aruba Certified Expert Program",
-      categories: ["Destination", "Rewards"],
-      language: "en",
-      logo: "images/logo-aruba.jpg",
-      logoAlt: "Aruba",
-      url: "#",
-      description:
-        "Learn how Aruba is “One Happy Island” for couples, families, active vacationers and pure beach relaxation-lovers alike.",
-      isNew: false,
+      "id": "aruba",
+      "title": "Aruba Certified Expert Program",
+      "categories": [
+        "Destination",
+        "Rewards"
+      ],
+      "language": "en",
+      "logo": "images/logo-aruba.jpg",
+      "logoAlt": "Aruba",
+      "url": "#",
+      "description": "Learn how Aruba is “One Happy Island” for couples, families, active vacationers and pure beach relaxation-lovers alike.",
+      "isNew": false
     },
     {
-      id: "atlantis",
-      title: "Atlantis Ambassador",
-      categories: ["Hotel/Resort", "Luxury", "Rewards", "Tours"],
-      language: "en",
-      logo: "images/logo-atlantis.jpg",
-      logoAlt: "Atlantis Paradise Island Bahamas",
-      url: "#",
-      description:
-        "Become empowered! Discover how to create unforgettable vacations at our unique resort destination, with unparalleled entertainment and awe-inspiring recreation.",
-      isNew: false,
-    },
-    {
-      id: "atlantis-1",
-      title: "Atlantis Ambassador 1",
-      categories: ["Hotel/Resort", "Luxury", "Rewards", "Tours"],
-      language: "en",
-      logo: "images/logo-atlantis.jpg",
-      logoAlt: "Atlantis Paradise Island Bahamas",
-      url: "#",
-      description:
-        "Become empowered! Discover how to create unforgettable vacations at our unique resort destination, with unparalleled entertainment and awe-inspiring recreation.",
-      isNew: false,
-    },
-    {
-      id: "atlantis-2",
-      title: "Atlantis Ambassador 2",
-      categories: ["Hotel/Resort", "Luxury", "Rewards", "Tours"],
-      language: "en",
-      logo: "images/logo-atlantis.jpg",
-      logoAlt: "Atlantis Paradise Island Bahamas",
-      url: "#",
-      description:
-        "Become empowered! Discover how to create unforgettable vacations at our unique resort destination, with unparalleled entertainment and awe-inspiring recreation.",
-      isNew: false,
-    },
+      "id": "atlantis",
+      "title": "Atlantis Ambassador",
+      "categories": [
+        "Hotel/Resort",
+        "Luxury",
+        "Rewards",
+        "Tours"
+      ],
+      "language": "en",
+      "logo": "images/logo-atlantis.jpg",
+      "logoAlt": "Atlantis Paradise Island Bahamas",
+      "url": "#",
+      "description": "Become empowered! Discover how to create unforgettable vacations at our unique resort destination, with unparalleled entertainment and awe-inspiring recreation.",
+      "isNew": false
+    }
   ];
 
   var PLANE_ICON = '<svg width="14" height="12" viewBox="0 0 24 20" fill="currentColor" aria-hidden="true"><path d="M2 17h20v2H2zM22.07 7.57c-.21-.8-1.04-1.28-1.84-1.06L14.92 7.93 8 1.48 6.07 2l4.14 7.17-4.97 1.33L3.27 8.96 1.82 9.35l1.82 3.16.77 1.33 1.6-.43 5.31-1.42 4.35-1.16 5.31-1.43c.81-.23 1.28-1.05 1.09-1.83z"/></svg>';

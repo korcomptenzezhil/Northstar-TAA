@@ -1,6 +1,16 @@
 /* ==========================================================
    Travel Agent Academy – Dynamic Testimonials Slider
    Vanilla JS, no dependencies.
+
+   Data source (in order of priority):
+   1. JSON URL in the slider's data-src attribute, e.g.
+      <div id="testimonialSlider" data-src="/api/testimonials.json">
+      Expected format: [{ "quote": "", "name": "", "role": "", "photo": "" }, ...]
+   2. The DEFAULT_TESTIMONIALS array below.
+
+   Options (data attributes on the slider element):
+   data-autoplay="7000"   autoplay delay in ms; "0" turns autoplay off
+   data-loop="true"       wrap around at the ends
    ========================================================== */
 (function () {
   'use strict';
@@ -34,7 +44,7 @@
     }
   ];
 
-  var QUOTE_SVG = '<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H6a1 1 0 0 1 1-1h3zm11 0h-4a3 3 0 0 0-3 3v7h7v-7h-4a1 1 0 0 1 1-1h3z"/></svg>';
+  var QUOTE_SVG = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 7H6a3 3 0 0 0-3 3v7h7v-7H6a1 1 0 0 1 1-1h3zm11 0h-4a3 3 0 0 0-3 3v7h7v-7h-4a1 1 0 0 1 1-1h3z"/></svg>';
 
   function escapeHtml(str) {
     return String(str == null ? '' : str).replace(/[&<>"']/g, function (c) {
