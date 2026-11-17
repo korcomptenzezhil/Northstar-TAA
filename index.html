@@ -65,8 +65,7 @@
   <main id="main">
 
     <!-- ============ HERO CAROUSEL ============ -->
-    <!-- Slides 2–4 use placeholder imagery; swap in your campaign images. -->
-    <!-- Manual only: data-interval="false" and no data-ride, so slides change only via the arrows/indicators -->
+   
     <section id="heroCarousel" class="carousel slide hero-carousel" data-interval="false" aria-label="Featured promotions">
       <ol class="carousel-indicators dots-ring d-none d-lg-flex">
         <li data-target="#heroCarousel" data-slide-to="0" class="active" aria-label="Slide 1"></li>
@@ -75,15 +74,14 @@
         <li data-target="#heroCarousel" data-slide-to="3" aria-label="Slide 4"></li>
       </ol>
       <div class="carousel-inner">
-        <!-- Slide 1: background video. Replace src with your own file; the poster image shows until it loads, or if it can't play. -->
+        
         <div class="carousel-item active hero-slide-1 hero-slide-video" style="background-image: url(images/hero.jpg)">
-          <!-- No "muted" attribute: js/hero-video.js tries to play with sound first and falls back to muted
-               if the browser blocks it, then turns sound on at the visitor's first interaction. -->
+          
           <video class="hero-video" autoplay loop playsinline preload="metadata" poster="images/hero.jpg">
             <source src="videos/travel-agent-academy-hero.mp4" type="video/mp4">
           </video>
           <div class="hero-video-toggle" role="group" aria-label="Video controls">
-            <!-- Shown only if the browser blocks sound (or playback) until the visitor interacts -->
+            
             <button type="button" class="hero-sound-hint d-none" data-video-sound-hint>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor"/><path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14"/></svg>
               <span>Click for sound</span>
@@ -158,7 +156,7 @@
         <div class="catalog-inner">
           <h2 class="section-title font-display text-center">Course Catalog</h2>
 
-          <!-- Featured course carousel (slides 2–4 are placeholders) -->
+          
           <div id="featuredCarousel" class="carousel slide featured-carousel" data-interval="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -214,7 +212,7 @@
             </ol>
           </div>
 
-          <!-- Filters (options are filled from the course data by js/courses.js) -->
+          
           <form class="course-filters form-row align-items-center" action="#" role="search" aria-controls="courseList">
             <div class="col-md-6 search-wrap">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
@@ -240,10 +238,10 @@
 
           <p class="results-count" id="courseCount" aria-live="polite" aria-atomic="true"></p>
 
-          <!-- Course list: cards are loaded from data/courses.json by js/courses.js -->
+          
           <div id="courseList" class="course-list" data-src="data/courses.json" data-page-size="8" aria-busy="true">
             <div class="row course-grid">
-              <!-- Loading placeholders, replaced once the data arrives -->
+              
               <div class="col-sm-6 col-lg-3 course-col"><div class="course-card is-skeleton" aria-hidden="true"></div></div>
               <div class="col-sm-6 col-lg-3 course-col"><div class="course-card is-skeleton" aria-hidden="true"></div></div>
               <div class="col-sm-6 col-lg-3 course-col"><div class="course-card is-skeleton" aria-hidden="true"></div></div>
@@ -260,7 +258,7 @@
               <span class="spinner-border" aria-hidden="true"></span>
               <span class="sr-only">Loading more courses…</span>
             </div>
-            <!-- Infinite scroll: when this sentinel nears the viewport, the next batch loads -->
+           
             <div id="courseSentinel" class="course-sentinel" aria-hidden="true"></div>
           </div>
         </div>
@@ -272,8 +270,7 @@
       <div class="container-wide">
         <h2 class="section-title font-display">Testimonials</h2>
 
-        <!-- Dynamic slider: cards are built by js/testimonials.js.
-             Add data-src="/path/to/testimonials.json" to load them from a URL instead. -->
+        <!-- Dynamic slider: cards are built by js/testimonials.js  -->
         <div id="testimonialSlider" class="t-slider" role="region" aria-roledescription="carousel" aria-label="Testimonials" tabindex="0" data-autoplay="0" data-loop="true">
           <div class="t-viewport">
             <div class="t-track"></div>
@@ -395,7 +392,7 @@
     </div>
   </footer>
 
-  <!-- jQuery 3.5.1 (full build – the course list needs $.ajax) + Bootstrap 4.6.2 bundle -->
+  
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
   <script src="js/testimonials.js"></script>
