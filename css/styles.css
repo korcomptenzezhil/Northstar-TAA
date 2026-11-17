@@ -140,7 +140,7 @@ a:hover { color: var(--taa-teal); }
 
 /* ---------- Hero ---------- */
 .hero-carousel .carousel-item {
-  height: 820px;
+  height: 900px;
   background-size: cover;
   background-position: center;
   position: relative;
