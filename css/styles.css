@@ -1309,7 +1309,7 @@ a:hover {
   }
 
   .hero-carousel .carousel-item {
-    height: 240px;
+    height: 360px;
   }
 
   .section-title {
@@ -1344,6 +1344,12 @@ a:hover {
 
   .footer-bottom a {
     margin: 0 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-carousel .carousel-item {
+    height: 220px;
   }
 }
 
