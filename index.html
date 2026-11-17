@@ -76,13 +76,33 @@
       <div class="carousel-inner">
        
         <div class="carousel-item active hero-slide-1 hero-slide-video" style="background-image: url(images/hero.jpg)">
-          <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="images/hero.jpg" aria-label="Aerial view of a plane wing over a tropical atoll at sunset">
+          <!-- No "muted" attribute: js/hero-video.js tries to play with sound first and falls back to muted
+                       if the browser blocks it (see notes in that file). -->
+          <video class="hero-video" autoplay loop playsinline preload="metadata" poster="images/hero.jpg">
             <source src="videos/travel-agent-academy-hero.mp4" type="video/mp4">
           </video>
-          <button type="button" class="hero-video-toggle" aria-label="Pause background video" aria-pressed="false">
-            <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
-            <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8z"/></svg>
-          </button>
+          <div class="hero-video-toggle" role="group" aria-label="Video controls">
+            <button type="button" class="hero-video-btn" data-video-play aria-label="Pause video" aria-pressed="false">
+              <svg class="icon-pause" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6 4h4v16H6zM14 4h4v16h-4z" />
+              </svg>
+              <svg class="icon-play" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 4v16l13-8z" />
+              </svg>
+            </button>
+            <button type="button" class="hero-video-btn" data-video-mute aria-label="Mute video" aria-pressed="false">
+              <svg class="icon-sound-on" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7M19 5a10 10 0 0 1 0 14" />
+              </svg>
+              <svg class="icon-sound-off" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M11 5 6 9H2v6h4l5 4z" fill="currentColor" />
+                <path d="m22 9-6 6M16 9l6 6" />
+              </svg>
+            </button>
+          </div>
         </div>
         <div class="carousel-item hero-slide-2" role="img" aria-label="Travel advisor on a balcony in Santorini" style="background-image: url(images/featured-course.jpg)"></div>
         <div class="carousel-item hero-slide-3" role="img" aria-label="Kayakers in a turquoise sea cove" style="background-image: url(images/sponsors-kayak.jpg)"></div>
