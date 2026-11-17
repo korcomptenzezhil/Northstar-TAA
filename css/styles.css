@@ -324,7 +324,7 @@ a:hover { color: var(--taa-teal); }
   margin: 22px auto 34px;
 }
 .featured-carousel .dots-ring li { width: 16px; height: 16px; background: var(--taa-blue); }
-.featured-carousel .dots-ring li.active { background: #fff; box-shadow: 0 0 0 1.5px var(--taa-blue); }
+.featured-carousel .dots-ring li.active { background: #fff; border: 1.5px solid var(--taa-blue); }
 .featured-carousel .dots-ring li.active::after { inset: 4px; background: var(--taa-blue); box-shadow: none; }
 
 /* Filters */
