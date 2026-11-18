@@ -496,7 +496,7 @@ a:hover {
   display: flex;
   align-items: center;
   font-family: var(--font-body);
-  font-size: 0.85rem;
+  font-size: 0.875rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -517,7 +517,7 @@ a:hover {
 
 .why-item p {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.08rem;
+  font-size: 1.125rem;;
   line-height: 1.7;
   margin: 0;
   max-width: 420px;
@@ -565,19 +565,19 @@ a:hover {
 
 .featured-eyebrow {
   color: var(--taa-peach);
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .featured-card h3 {
-  font-size: 2.35rem;
+  font-size: 2.125rem;
   margin-bottom: 12px;
 }
 
 .featured-card p {
-  font-size: 1.08rem;
-  line-height: 1.4;
+  font-size: 1.125rem;
+  line-height: 1.5;
   max-width: 540px;
   margin-bottom: 18px;
 }
@@ -858,7 +858,7 @@ a:hover {
 .testimonials-section .section-title {
   color: var(--taa-blue);
   font-weight: 500;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   margin-bottom: 22px;
 }
 
@@ -1044,13 +1044,13 @@ a:hover {
 }
 
 .sponsors-section h2 {
-  font-size: 3rem;
+  font-size: 2.625rem;
   line-height: 1;
   margin-bottom: 36px;
 }
 
 .sponsors-section p {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
   max-width: 520px;
