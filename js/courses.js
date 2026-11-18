@@ -31,203 +31,6 @@
     de: "Loslegen",
   };
 
-  // Used only if the JSON file can't be loaded (e.g. opening index.html
-  // straight from disk, where browsers block AJAX on file:// URLs).
-  var FALLBACK_COURSES = [
-    {
-      id: "xcaret-expert",
-      title: "Xcaret Expert Program",
-      categories: ["Promotions", "New", "Hotel/Resort"],
-      language: "en",
-      isNew: true,
-      logo: "images/logo-xcaret.png",
-      logoAlt: "Xcaret",
-      url: "#",
-      description:
-        "Become a Xcaret Xpert and give your clients a seamless tropical vacation like no other by learning how to sell the parks and resorts together as the perfect incarnation of a dream getaway!",
-    },
-    {
-      id: "airfrance-klm-en",
-      title: "Air France and KLM Specialist Program",
-      categories: ["Airlines"],
-      language: "en",
-      logo: "images/logo-airfrance-klm.png",
-      logoAlt: "Air France KLM",
-      url: "#",
-      description:
-        "Learn about the distinct offerings that define both these legendary airlines and the benefits they provide you and your clients — whether your clients are looking for luxury, affordable comfort or customized personal service.",
-      isNew: false,
-    },
-    {
-      id: "airfrance-klm-fr",
-      title: "Le programme spécialiste Air France et KLM",
-      categories: ["Airlines"],
-      language: "fr",
-      logo: "images/logo-airfrance-klm.png",
-      logoAlt: "Air France KLM",
-      url: "#",
-      description:
-        "Que vos clients recherchent le luxe, un confort abordable ou un service personnalisé, vous apprendrez à tirer parti des nombreuses options proposées par Air France et KLM pour trouver la solution qui leur convient, quelle que soit leur destination.",
-      isNew: false,
-    },
-    {
-      id: "allianz",
-      title: "Allianz Travel Protection Partners",
-      categories: ["Services"],
-      language: "en",
-      logo: "images/logo-allianz.jpg",
-      logoAlt: "Allianz",
-      url: "#",
-      description:
-        "Offering travel insurance is an important part of the travel sales process, because providing protection for those hard-earned vacations helps you deliver the best value and highest level of service to your customers.",
-      isNew: false,
-    },
-    {
-      id: "visit-algarve",
-      title: "Visit Algarve Specialist Program",
-      categories: ["Destination"],
-      language: "en",
-      logo: "images/logo-visit-algarve.png",
-      logoAlt: "Visit Algarve Portugal",
-      url: "#",
-      description:
-        "Introduce Portugal’s beautiful Algarve to clients who would love the luxurious feel of a European beach escape!",
-      isNew: false,
-    },
-    {
-      id: "arizona",
-      title: "Arizona Specialist Program",
-      categories: ["Destination"],
-      language: "en",
-      logo: "images/logo-arizona.jpg",
-      logoAlt: "Arizona",
-      url: "#",
-      description:
-        "Arizona’s landscapes are brimming with natural beauty, adventure, history, wellness, art and culinary flavor. Enroll to help your clients discover the best of what the Grand Canyon State has to offer!",
-      isNew: false,
-    },
-    {
-      id: "aruba",
-      title: "Aruba Certified Expert Program",
-      categories: ["Destination", "Rewards"],
-      language: "en",
-      logo: "images/logo-aruba.jpg",
-      logoAlt: "Aruba",
-      url: "#",
-      description:
-        "Learn how Aruba is “One Happy Island” for couples, families, active vacationers and pure beach relaxation-lovers alike.",
-      isNew: false,
-    },
-    {
-      id: "atlantis",
-      title: "Atlantis Ambassador",
-      categories: ["Hotel/Resort", "Luxury", "Rewards", "Tours"],
-      language: "en",
-      logo: "images/logo-atlantis.jpg",
-      logoAlt: "Atlantis Paradise Island Bahamas",
-      url: "#",
-      description:
-        "Become empowered! Discover how to create unforgettable vacations at our unique resort destination, with unparalleled entertainment and awe-inspiring recreation.",
-      isNew: false,
-    },
-    {
-      id: "bahamas-specialist",
-      title: "Bahamas Specialist Program",
-      categories: ["Destination", "New"],
-      language: "en",
-      logo: "images/2026_bajalogo.png",
-      logoAlt: "Bahamas",
-      url: "#",
-      description:
-        "Discover the beautiful islands of the Bahamas, explore unique experiences and learn how to create unforgettable vacations for your clients.",
-      isNew: true,
-    },
-    {
-      id: "aat-kings",
-      title: "AAT Kings A-LISTERS Program & Agent Academy",
-      categories: ["Destination"],
-      language: "en",
-      logo: "images/AAT-Kings-LOGO.png",
-      logoAlt: "AAT Kings A-LISTERS Program & Agent Academy",
-      url: "#",
-      description:
-        "Explore Barbados, from its beautiful beaches and rich culture to its culinary experiences and exciting adventures, and help your clients plan the perfect Caribbean getaway.",
-      isNew: false,
-    },
-    {
-      id: "algvpro",
-      title: "ALGVPro: Travel Advisor Special Program",
-      categories: ["Cruises", "Rewards"],
-      language: "en",
-      logo: "images/alg_1.png",
-      logoAlt: "ALGVPro: Travel Advisor Special Program",
-      url: "#",
-      description:
-        "Learn about Carnival Cruise Line experiences, destinations, onboard entertainment and activities to help your clients choose their ideal cruise vacation.",
-      isNew: false,
-    },
-    {
-      id: "audley",
-      title: "Audley",
-      categories: ["Destination", "Tours"],
-      language: "en",
-      logo: "images/Audley_Travel_logo_320-142_1.png",
-      logoAlt: "Audley",
-      url: "#",
-      description:
-        "Discover Costa Rica's natural beauty, wildlife, adventure activities and eco-tourism experiences to create memorable travel experiences for your clients.",
-      isNew: false,
-    },
-    {
-      id: "azamara",
-      title: "Azamara World Academy",
-      categories: ["Hotel/Resort", "Tours", "New"],
-      language: "en",
-      logo: "images/AZA-CRUISES_LOGO_TAA.png",
-      logoAlt: "Azamara World Academy",
-      url: "#",
-      description:
-        "Explore Disney vacation experiences, resort options, attractions and entertainment to help families plan magical holidays.",
-      isNew: true,
-    },
-    {
-      id: "la-paz",
-      title: "La Paz Specialist Program",
-      categories: ["Destination", "Luxury"],
-      language: "en",
-      logo: "images/lapaz.png",
-      logoAlt: "La Paz Specialist Program",
-      url: "#",
-      description:
-        "Learn about Hawaii's islands, beaches, cultural heritage and unique experiences to help your clients plan an unforgettable island escape.",
-      isNew: false,
-    },
-    {
-      id: "lopesan",
-      title: "Lopesan Specialist Program",
-      categories: ["Destination", "Hotel/Resort"],
-      language: "en",
-      logo: "images/Lopesan_logo.png",
-      logoAlt: "Lopesan Specialist Program",
-      url: "#",
-      description:
-        "Discover Jamaica's beaches, resorts, music, culture and adventure experiences to recommend the perfect Caribbean vacation.",
-      isNew: false,
-    },
-    {
-      id: "greece",
-      title: "Greece Specialist Program",
-      categories: ["Cruises", "Luxury", "Rewards"],
-      language: "en",
-      logo: "images/greek-logo.png",
-      logoAlt: "Greece Specialist Program",
-      url: "#",
-      description:
-        "Learn about Royal Caribbean ships, destinations, onboard activities and cruise experiences to help clients find their ideal sailing.",
-      isNew: false,
-    },
-  ];
-
   var PLANE_ICON =
     '<svg width="14" height="12" viewBox="0 0 24 20" fill="currentColor" aria-hidden="true"><path d="M2 17h20v2H2zM22.07 7.57c-.21-.8-1.04-1.28-1.84-1.06L14.92 7.93 8 1.48 6.07 2l4.14 7.17-4.97 1.33L3.27 8.96 1.82 9.35l1.82 3.16.77 1.33 1.6-.43 5.31-1.42 4.35-1.16 5.31-1.43c.81-.23 1.28-1.05 1.09-1.83z"/></svg>';
 
@@ -273,20 +76,6 @@
 
   // Merge JSON data with fallback data. JSON records take priority;
   // fallback records are added only when their IDs are not already present.
-  CourseList.prototype.mergeCourses = function (courses) {
-    var merged = [];
-    var seen = {};
-    var allCourses = (courses || []).concat(FALLBACK_COURSES);
-
-    $.each(allCourses, function (_, course) {
-      if (!course || !course.id || seen[course.id]) return;
-      seen[course.id] = true;
-      merged.push($.extend({}, course));
-    });
-
-    return merged;
-  };
-
   CourseList.prototype.load = function () {
     var self = this;
     var src = this.$root.data("src") || "data/courses.json";
@@ -308,22 +97,31 @@
       timeout: 10000,
     })
       .done(function (data) {
-        var jsonCourses = $.isArray(data)
+        var courses = $.isArray(data)
           ? data
           : data && $.isArray(data.courses)
             ? data.courses
             : [];
 
-        // This ensures newly added fallback courses also appear when JSON loads.
-        self.init(self.mergeCourses(jsonCourses));
+        if (!courses.length) {
+          self.$root.removeClass("is-loading").attr("aria-busy", "false");
+          self.$grid.html(
+            '<div class="col-12"><p class="course-error">No courses are available.</p></div>',
+          );
+          self.$count.text("");
+          return;
+        }
+
+        self.init(courses);
       })
       .fail(function (xhr, status, error) {
-        console.warn(
-          "Course JSON could not be loaded. Using fallback courses.",
-          status,
-          error,
+        console.error("Course JSON could not be loaded:", status, error);
+        self.$root.removeClass("is-loading").attr("aria-busy", "false");
+        self.$grid.html(
+          '<div class="col-12"><p class="course-error">Sorry, the courses could not be loaded. Please check the data/courses.json path and try again.</p></div>',
         );
-        self.init(self.mergeCourses([]));
+        self.$count.text("");
+        self.$loading.addClass("d-none");
       });
   };
 
