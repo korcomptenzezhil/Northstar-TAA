@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Become a Registered Agent | Travel Agent Academy</title>
+  <meta name="description" content="Register for a free Travel Agent Academy account to enroll in destination, supplier and specialist courses for travel advisors.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Zilla+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 4.6.2 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <a class="sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container-wide">
+      <nav class="navbar navbar-expand-lg navbar-light px-0">
+        <a class="navbar-brand py-0" href="index.html">
+          <img src="images/logo.png" alt="Travel Agent Academy by Northstar">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav mx-lg-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html#catalog">Course Catalogue</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Articles</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+          </ul>
+
+          <div class="header-actions d-flex align-items-center">
+            <form class="header-search" role="search" action="#">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <label for="siteSearch" class="sr-only">Search</label>
+              <input id="siteSearch" class="form-control" type="search" placeholder="Search courses, articles...">
+            </form>
+            <a href="register.html" class="btn btn-pill btn-taa-outline ml-3">Register</a>
+            <a href="#" class="btn btn-pill btn-taa-solid ml-2">Login</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ============ PROMO BAR ============ -->
+  <div class="promo-bar d-none">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5C10 3 12 8 12 8s2-5 4.5-5a2.5 2.5 0 0 1 0 5"/></svg>
+    Sitewide Promo: Enter for a chance to win! Offer Ends Tomorrow
+    <a href="#">Learn More</a>
+  </div>
+
+  <main id="main">
+    <!-- ======================================================
+         REGISTRATION PAGE CONTENT
+         (header and footer are the shared ones from index.html)
+         The 3 steps are handled by js/register.js.
+         ====================================================== -->
+
+    <!-- ============ HERO ============ -->
+    <section class="register-hero">
+      <div class="container-wide register-hero-inner">
+        <h1 class="register-title font-display">Become a Registered Agent!</h1>
+        <div class="register-hero-media">
+          <img class="register-hero-photo" src="images/register/register-hero-traveler.png" alt="" width="476" height="559">
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REGISTRATION FORM ============ -->
+    <section class="register-body">
+      <div class="register-wrap">
+
+        <!-- Progress steps -->
+        <ol class="register-steps" id="registerSteps" aria-label="Registration progress">
+          <li class="register-step is-current" data-step="1">
+            <button type="button" class="register-step-btn" disabled aria-current="step">
+              <span class="register-step-num" aria-hidden="true">01</span>
+              <span class="register-step-label" data-done-label="01 Account Created">01 Account Information</span>
+            </button>
+          </li>
+          <li class="register-step" data-step="2">
+            <button type="button" class="register-step-btn" disabled>
+              <span class="register-step-num" aria-hidden="true">02</span>
+              <span class="register-step-label">02 Complete Registration</span>
+            </button>
+          </li>
+          <li class="register-step" data-step="3">
+            <button type="button" class="register-step-btn" disabled>
+              <span class="register-step-num" aria-hidden="true">03</span>
+              <span class="register-step-label">03 Accreditation &amp; Preferences</span>
+            </button>
+          </li>
+        </ol>
+        <p class="sr-only" id="registerStatus" aria-live="polite"></p>
+
+        <!-- Set action to your registration endpoint; while it is "#" the page shows the thank-you message instead of submitting. -->
+        <form id="registerForm" class="register-form" action="#" method="post" novalidate>
+
+          <!-- ===== STEP 1: Account Information ===== -->
+          <fieldset class="register-panel" data-step="1">
+            <legend class="sr-only">Step 1 of 3: Account information</legend>
+
+            <div class="register-section-head">
+              <img src="images/register/register-icon-information.png" alt="" width="50" height="50">
+              <h2 class="font-display">Information</h2>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regEmail">Email<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="email" id="regEmail" name="email" autocomplete="email" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regEmailConfirm">Confirm Email<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="email" id="regEmailConfirm" name="email_confirm" autocomplete="email" required data-match="#regEmail" data-match-message="Email addresses do not match.">
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regPassword">Password<span class="req" aria-hidden="true">*</span></label>
+              <div class="register-password">
+                <input class="form-control register-input" type="password" id="regPassword" name="password" autocomplete="new-password" required maxlength="32" data-password aria-describedby="regPasswordHelp regPasswordStrength regPasswordRules">
+                <button type="button" class="register-eye" data-toggle-password="#regPassword" aria-label="Show password" aria-pressed="false">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5C6.5 5 2.7 9.2 1.5 12c1.2 2.8 5 7 10.5 7s9.3-4.2 10.5-7C21.3 9.2 17.5 5 12 5zm0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                </button>
+              </div>
+              <div class="invalid-feedback"></div>
+              <p class="register-help" id="regPasswordHelp">Minimum of 12 characters, max 32, must include at least one number, one special character, one upper case letter, and one lower case letter, and any combination of '!@&amp;' is not allowed.</p>
+              <p class="register-strength" id="regPasswordStrength">Password Strength: <span data-strength>—</span></p>
+              <div class="register-rules" id="regPasswordRules">
+                <p class="mb-0">Password requirements:</p>
+                <ul>
+                  <li data-rule="length">Minimum length of 12 characters</li>
+                  <li data-rule="case">At least one lowercase and one uppercase letter</li>
+                  <li data-rule="digit">At least one digit (0-9)</li>
+                  <li data-rule="special">At least one special character (!@$%^&amp;*()_?":{}|&lt;&gt;)</li>
+                  <li data-rule="combo">any combination of !@&amp; is not allowed</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regPasswordConfirm">Confirm your password<span class="req" aria-hidden="true">*</span></label>
+              <div class="register-password">
+                <input class="form-control register-input" type="password" id="regPasswordConfirm" name="password_confirm" autocomplete="new-password" required maxlength="32" data-match="#regPassword" data-match-message="Passwords do not match.">
+                <button type="button" class="register-eye" data-toggle-password="#regPasswordConfirm" aria-label="Show password" aria-pressed="false">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 5C6.5 5 2.7 9.2 1.5 12c1.2 2.8 5 7 10.5 7s9.3-4.2 10.5-7C21.3 9.2 17.5 5 12 5zm0 11.5a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9zm0-2.5a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+                </button>
+              </div>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regFirstName">First name<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regFirstName" name="first_name" autocomplete="given-name" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regLastName">Last name<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regLastName" name="last_name" autocomplete="family-name" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regCompany">Company<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regCompany" name="company" autocomplete="organization" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group register-check">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regTerms" name="terms" value="1" required data-required-message="Please accept the terms to continue.">
+                <label class="form-check-label" for="regTerms">By registering for and enrolling in these sponsored courses I accept Northstar Travel Group's <a href="#">Terms</a> &amp; <a href="#">Privacy</a>, and I agree that the data entered into this registration form will be provided to the sponsor of each program I enroll in. You may withdraw consent, request to review or revise information we retain about you by <a href="#">using this form</a></label>
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+
+            <div class="register-actions">
+              <button type="button" class="btn btn-register" data-next>Next</button>
+            </div>
+          </fieldset>
+
+          <!-- ===== STEP 2: Complete Registration ===== -->
+          <fieldset class="register-panel d-none" data-step="2">
+            <legend class="sr-only">Step 2 of 3: Complete registration</legend>
+
+            <div class="register-section-head">
+              <img src="images/register/register-icon-mailing.png" alt="" width="50" height="50">
+              <h2 class="font-display">Mailing Address</h2>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regStreet1">Street 1<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regStreet1" name="street1" autocomplete="address-line1" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regStreet2">Street 2</label>
+              <input class="form-control register-input" type="text" id="regStreet2" name="street2" autocomplete="address-line2">
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regCity">City/Town<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regCity" name="city" autocomplete="address-level2" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regCountry">Country<span class="req" aria-hidden="true">*</span></label>
+              <select class="custom-select register-select" id="regCountry" name="country" autocomplete="country-name" required>
+                <option value="">-- Please select --</option>
+                <option>United States</option>
+                <option>Canada</option>
+                <option disabled>──────────</option>
+                <option>Afghanistan</option>
+                <option>Albania</option>
+                <option>Algeria</option>
+                <option>Andorra</option>
+                <option>Angola</option>
+                <option>Antigua and Barbuda</option>
+                <option>Argentina</option>
+                <option>Armenia</option>
+                <option>Aruba</option>
+                <option>Australia</option>
+                <option>Austria</option>
+                <option>Azerbaijan</option>
+                <option>Bahamas</option>
+                <option>Bahrain</option>
+                <option>Bangladesh</option>
+                <option>Barbados</option>
+                <option>Belarus</option>
+                <option>Belgium</option>
+                <option>Belize</option>
+                <option>Benin</option>
+                <option>Bermuda</option>
+                <option>Bhutan</option>
+                <option>Bolivia</option>
+                <option>Bonaire, Sint Eustatius and Saba</option>
+                <option>Bosnia and Herzegovina</option>
+                <option>Botswana</option>
+                <option>Brazil</option>
+                <option>British Virgin Islands</option>
+                <option>Brunei</option>
+                <option>Bulgaria</option>
+                <option>Burkina Faso</option>
+                <option>Burundi</option>
+                <option>Cabo Verde</option>
+                <option>Cambodia</option>
+                <option>Cameroon</option>
+                <option>Cayman Islands</option>
+                <option>Central African Republic</option>
+                <option>Chad</option>
+                <option>Chile</option>
+                <option>China</option>
+                <option>Colombia</option>
+                <option>Comoros</option>
+                <option>Congo</option>
+                <option>Congo (Democratic Republic)</option>
+                <option>Costa Rica</option>
+                <option>Côte d’Ivoire</option>
+                <option>Croatia</option>
+                <option>Cuba</option>
+                <option>Curaçao</option>
+                <option>Cyprus</option>
+                <option>Czechia</option>
+                <option>Denmark</option>
+                <option>Djibouti</option>
+                <option>Dominica</option>
+                <option>Dominican Republic</option>
+                <option>Ecuador</option>
+                <option>Egypt</option>
+                <option>El Salvador</option>
+                <option>Equatorial Guinea</option>
+                <option>Eritrea</option>
+                <option>Estonia</option>
+                <option>Eswatini</option>
+                <option>Ethiopia</option>
+                <option>Fiji</option>
+                <option>Finland</option>
+                <option>France</option>
+                <option>French Polynesia</option>
+                <option>Gabon</option>
+                <option>Gambia</option>
+                <option>Georgia</option>
+                <option>Germany</option>
+                <option>Ghana</option>
+                <option>Greece</option>
+                <option>Grenada</option>
+                <option>Guadeloupe</option>
+                <option>Guam</option>
+                <option>Guatemala</option>
+                <option>Guinea</option>
+                <option>Guinea-Bissau</option>
+                <option>Guyana</option>
+                <option>Haiti</option>
+                <option>Honduras</option>
+                <option>Hong Kong</option>
+                <option>Hungary</option>
+                <option>Iceland</option>
+                <option>India</option>
+                <option>Indonesia</option>
+                <option>Iran</option>
+                <option>Iraq</option>
+                <option>Ireland</option>
+                <option>Israel</option>
+                <option>Italy</option>
+                <option>Jamaica</option>
+                <option>Japan</option>
+                <option>Jordan</option>
+                <option>Kazakhstan</option>
+                <option>Kenya</option>
+                <option>Kiribati</option>
+                <option>Kosovo</option>
+                <option>Kuwait</option>
+                <option>Kyrgyzstan</option>
+                <option>Laos</option>
+                <option>Latvia</option>
+                <option>Lebanon</option>
+                <option>Lesotho</option>
+                <option>Liberia</option>
+                <option>Libya</option>
+                <option>Liechtenstein</option>
+                <option>Lithuania</option>
+                <option>Luxembourg</option>
+                <option>Macao</option>
+                <option>Madagascar</option>
+                <option>Malawi</option>
+                <option>Malaysia</option>
+                <option>Maldives</option>
+                <option>Mali</option>
+                <option>Malta</option>
+                <option>Marshall Islands</option>
+                <option>Martinique</option>
+                <option>Mauritania</option>
+                <option>Mauritius</option>
+                <option>Mexico</option>
+                <option>Micronesia</option>
+                <option>Moldova</option>
+                <option>Monaco</option>
+                <option>Mongolia</option>
+                <option>Montenegro</option>
+                <option>Morocco</option>
+                <option>Mozambique</option>
+                <option>Myanmar</option>
+                <option>Namibia</option>
+                <option>Nauru</option>
+                <option>Nepal</option>
+                <option>Netherlands</option>
+                <option>New Caledonia</option>
+                <option>New Zealand</option>
+                <option>Nicaragua</option>
+                <option>Niger</option>
+                <option>Nigeria</option>
+                <option>North Korea</option>
+                <option>North Macedonia</option>
+                <option>Norway</option>
+                <option>Oman</option>
+                <option>Pakistan</option>
+                <option>Palau</option>
+                <option>Palestine</option>
+                <option>Panama</option>
+                <option>Papua New Guinea</option>
+                <option>Paraguay</option>
+                <option>Peru</option>
+                <option>Philippines</option>
+                <option>Poland</option>
+                <option>Portugal</option>
+                <option>Puerto Rico</option>
+                <option>Qatar</option>
+                <option>Réunion</option>
+                <option>Romania</option>
+                <option>Russia</option>
+                <option>Rwanda</option>
+                <option>Saint Kitts and Nevis</option>
+                <option>Saint Lucia</option>
+                <option>Saint Vincent and the Grenadines</option>
+                <option>Samoa</option>
+                <option>San Marino</option>
+                <option>São Tomé and Príncipe</option>
+                <option>Saudi Arabia</option>
+                <option>Senegal</option>
+                <option>Serbia</option>
+                <option>Seychelles</option>
+                <option>Sierra Leone</option>
+                <option>Singapore</option>
+                <option>Sint Maarten</option>
+                <option>Slovakia</option>
+                <option>Slovenia</option>
+                <option>Solomon Islands</option>
+                <option>Somalia</option>
+                <option>South Africa</option>
+                <option>South Korea</option>
+                <option>South Sudan</option>
+                <option>Spain</option>
+                <option>Sri Lanka</option>
+                <option>Sudan</option>
+                <option>Suriname</option>
+                <option>Sweden</option>
+                <option>Switzerland</option>
+                <option>Syria</option>
+                <option>Taiwan</option>
+                <option>Tajikistan</option>
+                <option>Tanzania</option>
+                <option>Thailand</option>
+                <option>Timor-Leste</option>
+                <option>Togo</option>
+                <option>Tonga</option>
+                <option>Trinidad and Tobago</option>
+                <option>Tunisia</option>
+                <option>Türkiye</option>
+                <option>Turkmenistan</option>
+                <option>Turks and Caicos Islands</option>
+                <option>Tuvalu</option>
+                <option>Uganda</option>
+                <option>Ukraine</option>
+                <option>United Arab Emirates</option>
+                <option>United Kingdom</option>
+                <option>Uruguay</option>
+                <option>U.S. Virgin Islands</option>
+                <option>Uzbekistan</option>
+                <option>Vanuatu</option>
+                <option>Vatican City</option>
+                <option>Venezuela</option>
+                <option>Vietnam</option>
+                <option>Yemen</option>
+                <option>Zambia</option>
+                <option>Zimbabwe</option>
+              </select>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regState">State/Province<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regState" name="state" autocomplete="address-level1" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regZip">Zip/Postal Code<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="text" id="regZip" name="zip" autocomplete="postal-code" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regPhone">Phone Number<span class="req" aria-hidden="true">*</span></label>
+              <input class="form-control register-input" type="tel" id="regPhone" name="phone" autocomplete="tel" required>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regFax">Fax Number</label>
+              <input class="form-control register-input" type="tel" id="regFax" name="fax">
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regWebsite">Website</label>
+              <input class="form-control register-input" type="text" inputmode="url" id="regWebsite" name="website" autocomplete="url">
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regRole">Which best describes you?<span class="req" aria-hidden="true">*</span></label>
+              <!-- PLACEHOLDER OPTIONS: replace with your real list -->
+              <select class="custom-select register-select" id="regRole" name="role" required>
+                <option value="">-- Please select --</option>
+                <option>Home-based travel advisor</option>
+                <option>Agency-based travel advisor</option>
+                <option>Agency owner / manager</option>
+                <option>Independent contractor</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regSalesVolume">What is the approximate annual sales volume at your agency location or home-based business?<span class="req" aria-hidden="true">*</span></label>
+              <!-- PLACEHOLDER OPTIONS: replace with your real list -->
+              <select class="custom-select register-select" id="regSalesVolume" name="sales_volume" required>
+                <option value="">-- Please select --</option>
+                <option>Under $250,000</option>
+                <option>$250,000 – $499,999</option>
+                <option>$500,000 – $999,999</option>
+                <option>$1 million – $4.9 million</option>
+                <option>$5 million or more</option>
+              </select>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="register-section-head register-section-head-plain">
+              <img src="images/register/register-icon-accreditation.png" alt="" width="50" height="50">
+              <h2 class="font-display">Accreditation Details</h2>
+            </div>
+
+            <p class="register-intro">Please indicate the accreditation details you or your agency uses when making bookings with suppliers.<span class="req" aria-hidden="true">*</span></p>
+
+            <div class="register-group" id="regAccreditation" data-require-one="#regArc, #regClia, #regIata" data-require-one-message="Please provide at least one accreditation ID number.">
+              <p class="register-group-title" id="regAccreditationTitle">Please provide at least one accreditation detail <span class="req" aria-hidden="true">*</span></p>
+              <div class="invalid-feedback" id="regAccreditationError"></div>
+
+              <div class="form-group">
+                <label class="register-label" for="regArc">ARC ID Number</label>
+                <input class="form-control register-input" type="text" id="regArc" name="arc_id" aria-describedby="regAccreditationTitle regAccreditationError">
+              </div>
+              <div class="form-group">
+                <label class="register-label" for="regClia">CLIA ID Number</label>
+                <input class="form-control register-input" type="text" id="regClia" name="clia_id" aria-describedby="regAccreditationTitle regAccreditationError">
+              </div>
+              <div class="form-group">
+                <label class="register-label" for="regIata">IATA ID Number</label>
+                <input class="form-control register-input" type="text" id="regIata" name="iata_id" aria-describedby="regAccreditationTitle regAccreditationError">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regConsortia">Consortia/cooperatives (please choose one)<span class="req" aria-hidden="true">*</span></label>
+              <!-- PLACEHOLDER OPTIONS: add your consortia/cooperatives list -->
+              <select class="custom-select register-select" id="regConsortia" name="consortia" required>
+                <option value="">-- Please select --</option>
+                <option>None</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <div class="form-group">
+              <label class="register-label" for="regHost">Host agencies/franchise/affiliation (please choose one)<span class="req" aria-hidden="true">*</span></label>
+              <!-- PLACEHOLDER OPTIONS: add your host agency/franchise/affiliation list -->
+              <select class="custom-select register-select" id="regHost" name="host_agency" required>
+                <option value="">-- Please select --</option>
+                <option>None</option>
+                <option>Other</option>
+              </select>
+              <div class="invalid-feedback"></div>
+            </div>
+
+            <fieldset class="form-group register-checklist" id="regDestinations">
+              <legend class="register-label">Please indicate the primary destinations that you sell:</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest1" name="destinations[]" value="USA">
+                <label class="form-check-label" for="regDest1">USA</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest2" name="destinations[]" value="Canada">
+                <label class="form-check-label" for="regDest2">Canada</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest3" name="destinations[]" value="Mexico">
+                <label class="form-check-label" for="regDest3">Mexico</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest4" name="destinations[]" value="Europe">
+                <label class="form-check-label" for="regDest4">Europe</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest5" name="destinations[]" value="Asia">
+                <label class="form-check-label" for="regDest5">Asia</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest6" name="destinations[]" value="Africa">
+                <label class="form-check-label" for="regDest6">Africa</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest7" name="destinations[]" value="Australia/New Zealand">
+                <label class="form-check-label" for="regDest7">Australia/New Zealand</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest8" name="destinations[]" value="Caribbean">
+                <label class="form-check-label" for="regDest8">Caribbean</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest9" name="destinations[]" value="Central America">
+                <label class="form-check-label" for="regDest9">Central America</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest10" name="destinations[]" value="Middle East">
+                <label class="form-check-label" for="regDest10">Middle East</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest11" name="destinations[]" value="South America">
+                <label class="form-check-label" for="regDest11">South America</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest12" name="destinations[]" value="all" data-all>
+                <label class="form-check-label" for="regDest12">All of the above</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regDest13" name="destinations[]" value="none" data-none>
+                <label class="form-check-label" for="regDest13">None of the above</label>
+              </div>
+            </fieldset>
+
+            <div class="register-actions">
+              <button type="button" class="btn btn-register" data-next>Next</button>
+            </div>
+          </fieldset>
+
+          <!-- ===== STEP 3: Accreditation & Preferences ===== -->
+          <fieldset class="register-panel d-none" data-step="3">
+            <legend class="sr-only">Step 3 of 3: Accreditation and preferences</legend>
+
+            <div class="form-group register-check">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regOptUpdates" name="opt_in_updates" value="1" checked>
+                <label class="form-check-label" for="regOptUpdates">YES, I want to receive updates from the Northstar Travel Group family of brands, including TravelPulse Newsletters, Travel Agent Academy educational courses, Digital Events &amp; Webinars and more.</label>
+              </div>
+            </div>
+
+            <div class="form-group register-check">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regOptPromos" name="opt_in_promotions" value="1" checked>
+                <label class="form-check-label" for="regOptPromos">YES, I want to receive information on exclusive travel industry promotions and offers from Northstar Travel Group and our partners.</label>
+              </div>
+            </div>
+
+            <fieldset class="form-group register-checklist" data-single-choice>
+              <legend class="register-small">Select one box if you want to receive AgentatHome Magazine for FREE, the industry's only magazine specifically geared towards helping the home-based travel agent:</legend>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regMagPrint" name="magazine" value="print">
+                <label class="form-check-label" for="regMagPrint">Print</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="regMagDigital" name="magazine" value="digital">
+                <label class="form-check-label" for="regMagDigital">Digital</label>
+              </div>
+            </fieldset>
+
+            <div class="register-actions">
+              <button type="submit" class="btn btn-register">Submit</button>
+            </div>
+          </fieldset>
+
+          <!-- Shown after a successful submit while the form action is "#" -->
+          <div class="register-success d-none" id="registerSuccess" tabindex="-1">
+            <h2 class="font-display">Thanks for registering!</h2>
+            <p>Your Travel Agent Academy account is ready. Browse the course catalog to start learning.</p>
+            <a href="index.html#catalog" class="btn btn-register">View Course Catalog</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container-wide">
+      <div class="row">
+        <div class="col-lg-4 pr-lg-5">
+          <img class="footer-logo" src="images/logo-footer.png" alt="Travel Agent Academy by Northstar">
+          <h2 class="font-display">Join the Inner Circle</h2>
+          <p class="footer-lead">Get updates on new classes, insights, travel inspiration, and our latest promotions.</p>
+
+          <form class="newsletter-form" action="#" onsubmit="return false;">
+            <div class="d-flex">
+              <label for="newsletterEmail" class="sr-only">Email address</label>
+              <input id="newsletterEmail" type="email" class="form-control" placeholder="Enter your email address" required>
+              <button type="submit" class="btn btn-pill btn-peach">Submit</button>
+            </div>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="marketingConsent">
+              <label class="custom-control-label" for="marketingConsent">I agree to receive marketing emails and updates.</label>
+            </div>
+            <p class="legal-note">By clicking “Submit”, you agree to our <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.</p>
+          </form>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg footer-col">
+          <h3>Explore</h3>
+          <ul class="footer-links">
+            <li><a href="#">Articles</a></li>
+            <li><a href="index.html#catalog">Course Catalog</a></li>
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Itinerary Builder</a></li>
+            <li><a href="#">Promotions</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg footer-col">
+          <h3>About</h3>
+          <ul class="footer-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Contact Sales</a></li>
+            <li><a href="#">Travel Pulse</a></li>
+            <li><a href="#">AgentatHome</a></li>
+            <li><a href="#">Northstar Travel Group</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-3 col-lg footer-col">
+          <h3>Social</h3>
+          <ul class="footer-links">
+            <li><a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>Facebook</a></li>
+            <li><a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-3 col-lg-auto footer-col">
+          <h3>Agents: Need&nbsp;Help?</h3>
+          <a href="#" class="help-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></svg>
+            Check our FAQ page
+          </a>
+          <a href="#" class="help-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+            Contact us using this form
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-md-flex align-items-center justify-content-between">
+        <div class="d-md-flex align-items-center">
+          <span>&copy; 2026 Travel Agent Academy. All rights reserved.</span>
+          <img src="images/northstar.png" alt="Northstar Travel Group" loading="lazy">
+        </div>
+        <div class="mt-3 mt-md-0">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
