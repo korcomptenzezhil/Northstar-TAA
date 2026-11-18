@@ -2,28 +2,6 @@
    Travel Agent Academy – Hero banner video (jQuery)
 
    Sound is ON by default, with a mute/unmute toggle.
-
-   Browser autoplay rules: Chrome, Safari, Firefox and Edge only allow a
-   video to play WITH sound after the visitor has interacted with the page
-   (click, tap or key press). Some (e.g. iOS Low Power Mode, or a "block
-   all autoplay" setting) block muted autoplay too. This script handles all
-   three outcomes:
-
-   1. Sound allowed      -> plays unmuted straight away.
-   2. Sound blocked      -> plays muted, shows a "Click for sound" button,
-                            and turns sound on at the first click / tap /
-                            key press anywhere on the page.
-   3. All autoplay blocked -> stays on the poster, shows "Click to play",
-                            and starts playing with sound at the first
-                            interaction.
-
-   If the visitor mutes or pauses the video, that choice is respected.
-   Set data-unmute-on-interaction="false" on #heroCarousel to require a
-   click on the sound button itself instead of any interaction.
-
-   Also: plays only while its slide is showing, pauses when the tab is
-   hidden, starts paused for "reduced motion" visitors, and falls back to
-   the slide's background image if the file can't load.
    ========================================================== */
 (function ($) {
   'use strict';
