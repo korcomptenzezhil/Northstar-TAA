@@ -298,7 +298,7 @@ a:hover {
 .hero-video-toggle {
   position: absolute;
   right: 24px;
-  top: 36px;
+  top: 16px;
   z-index: 5;
   /* above the gradient overlay and the arrows */
   display: flex;
