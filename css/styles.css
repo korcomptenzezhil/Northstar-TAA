@@ -1135,7 +1135,7 @@ a:hover {
 }
 
 .newsletter-form .custom-control-label {
-  font-size: 0.78rem;
+  font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.88);
   padding-top: 2px;
 }
@@ -1152,7 +1152,7 @@ a:hover {
 }
 
 .legal-note {
-  font-size: 0.68rem;
+  font-size: 11px;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 22px;
 }
