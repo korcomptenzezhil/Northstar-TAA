@@ -108,20 +108,41 @@ a:hover {
 
 /* ---------- Header ---------- */
 .site-header {
-  background: #fff;
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 1030;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 1050;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease;
+}
+
+.site-header.is-scrolled {
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* The promo bar is pushed below the fixed header by the layout script. */
+.promo-bar {
+  margin-top: var(--site-header-height, 0px);
 }
 
 .site-header .navbar {
   padding: 22px 0;
+  scale: 1;
+  transition: padding 0.35s ease, scale 0.35s ease;
+  transform-origin: center;
 }
 
 .site-header .navbar-brand img {
   height: 66px;
   width: auto;
+}
+
+.site-header.is-scrolled .navbar {
+  padding: 10px 0;
+  scale: 0.95;
 }
 
 .site-header .nav-item {
@@ -211,11 +232,25 @@ a:hover {
 }
 
 /* ---------- Hero ---------- */
+.hero-carousel {
+  height: var(--hero-carousel-height, 600px);
+  overflow: hidden;
+}
+
+.hero-carousel .carousel-inner,
 .hero-carousel .carousel-item {
-  height: 750px;
+  height: 100%;
+}
+
+.hero-carousel .carousel-item {
   background-size: cover;
   background-position: center;
   position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .hero-carousel .carousel-item::after {
@@ -246,10 +281,12 @@ a:hover {
 .hero-video {
   position: absolute;
   inset: 0;
+  display: block;
   width: 100%;
   height: 100%;
+  max-width: none;
   object-fit: cover;
-  display: block;
+  object-position: center;
 }
 
 .hero-slide-video.video-failed .hero-video {
@@ -444,6 +481,23 @@ a:hover {
   box-shadow: inset 0 0 0 2px #fff;
 }
 
+
+/* Fixed-header + viewport-height hero layout */
+html,
+body {
+  min-height: 100%;
+}
+
+.hero-carousel .carousel-item>* {
+  max-height: 100%;
+}
+
+@media (max-width: 991.98px) {
+  .site-header .navbar {
+    min-height: 0;
+  }
+}
+
 /* ---------- Why TAA ---------- */
 .why-section {
   background: var(--taa-teal);
@@ -517,7 +571,8 @@ a:hover {
 
 .why-item p {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.125rem;;
+  font-size: 1.125rem;
+  ;
   line-height: 1.7;
   margin: 0;
   max-width: 420px;
@@ -1247,10 +1302,6 @@ a:hover {
   .why-title {
     font-size: 2.6rem;
   }
-
-  .hero-carousel .carousel-item {
-    height: 530px;
-  }
 }
 
 @media (max-width: 991.98px) {
@@ -1278,10 +1329,6 @@ a:hover {
 
   .header-actions .btn {
     margin: 0 0 8px !important;
-  }
-
-  .hero-carousel .carousel-item {
-    height: 460px;
   }
 
   .why-title {
@@ -1344,10 +1391,6 @@ a:hover {
     border-bottom: 0;
   }
 
-  .hero-carousel .carousel-item {
-    height: 360px;
-  }
-
   .section-title {
     font-size: 2.1rem;
   }
@@ -1383,22 +1426,10 @@ a:hover {
   }
 }
 
-@media (max-width: 576px) {
-  .hero-carousel .carousel-item {
-    height: 220px;
-  }
-}
-
 @media (min-width: 992px) and (max-width: 1199px) {
   .site-header .navbar {
     flex-direction: column;
     gap: 25px;
-  }
-}
-
-@media (min-width: 1500px) {
-  .hero-carousel .carousel-item {
-    height: 100vh;
   }
 }
 
