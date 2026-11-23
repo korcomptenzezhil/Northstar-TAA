@@ -298,7 +298,7 @@ a:hover {
 .hero-video-toggle {
   position: absolute;
   right: 24px;
-  bottom: 36px;
+  top: 36px;
   z-index: 5;
   /* above the gradient overlay and the arrows */
   display: flex;
@@ -457,12 +457,12 @@ a:hover {
 
 /* Ring-style indicator dots (hero + featured) */
 .dots-ring {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .dots-ring li {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
   background: #fff;
   border: 0;
