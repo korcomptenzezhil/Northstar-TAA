@@ -1,5 +1,16 @@
 /* ==========================================================
    Travel Agent Academy – Dynamic Testimonials Slider
+   Vanilla JS, no dependencies.
+
+   Data source (in order of priority):
+   1. JSON URL in the slider's data-src attribute, e.g.
+      <div id="testimonialSlider" data-src="/api/testimonials.json">
+      Expected format: [{ "quote": "", "name": "", "role": "", "photo": "" }, ...]
+   2. The DEFAULT_TESTIMONIALS array below.
+
+   Options (data attributes on the slider element):
+   data-autoplay="7000"   autoplay delay in ms; "0" turns autoplay off
+   data-loop="true"       wrap around at the ends
    ========================================================== */
 (function () {
   'use strict';

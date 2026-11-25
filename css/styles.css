@@ -11,7 +11,7 @@
   --taa-light: #f7f8f6;
   --taa-border: #d9dddf;
   --font-body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-  --font-display: "Hepta Slab", Georgia, "Times New Roman", serif;
+  --font-display: "Zilla Slab", Georgia, "Times New Roman", serif;
 }
 
 html {
@@ -31,10 +31,6 @@ a {
 
 a:hover {
   color: var(--taa-teal);
-}
-
-.top-0 {
-  top: 0 !important;
 }
 
 .font-display {
@@ -108,24 +104,11 @@ a:hover {
 
 /* ---------- Header ---------- */
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
   background: #fff;
-  z-index: 1050;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
-  transition: box-shadow 0.2s ease;
-}
-
-.site-header.is-scrolled {
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
-}
-
-/* The promo bar is pushed below the fixed header by the layout script. */
-.promo-bar {
-  margin-top: var(--site-header-height, 0px);
 }
 
 .site-header .navbar {
@@ -232,25 +215,11 @@ a:hover {
 }
 
 /* ---------- Hero ---------- */
-.hero-carousel {
-  /* height: var(--hero-carousel-height, 600px); */
-  overflow: hidden;
-}
-
-.hero-carousel .carousel-inner,
 .hero-carousel .carousel-item {
-  height: 100%;
-}
-
-.hero-carousel .carousel-item {
+  height: 750px;
   background-size: cover;
   background-position: center;
   position: relative;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  min-height: 0;
-  overflow: hidden;
 }
 
 .hero-carousel .carousel-item::after {
@@ -281,12 +250,10 @@ a:hover {
 .hero-video {
   position: absolute;
   inset: 0;
-  display: block;
   width: 100%;
   height: 100%;
-  max-width: none;
   object-fit: cover;
-  object-position: center;
+  display: block;
 }
 
 .hero-slide-video.video-failed .hero-video {
@@ -457,12 +424,12 @@ a:hover {
 
 /* Ring-style indicator dots (hero + featured) */
 .dots-ring {
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
 .dots-ring li {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #fff;
   border: 0;
@@ -481,23 +448,6 @@ a:hover {
   box-shadow: inset 0 0 0 2px #fff;
 }
 
-
-/* Fixed-header + viewport-height hero layout */
-html,
-body {
-  min-height: 100%;
-}
-
-.hero-carousel .carousel-item>* {
-  max-height: 100%;
-}
-
-@media (max-width: 991.98px) {
-  .site-header .navbar {
-    min-height: 0;
-  }
-}
-
 /* ---------- Why TAA ---------- */
 .why-section {
   background: var(--taa-teal);
@@ -505,16 +455,8 @@ body {
   padding: 64px 0;
 }
 
-.why-header {
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
 .why-title {
-  font-size: 2.75rem;
+  font-size: 3.1rem;
   line-height: 0.95;
   margin: 0 0 22px;
 }
@@ -550,7 +492,7 @@ body {
   display: flex;
   align-items: center;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -571,8 +513,7 @@ body {
 
 .why-item p {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 1.125rem;
-  ;
+  font-size: 1.08rem;
   line-height: 1.7;
   margin: 0;
   max-width: 420px;
@@ -580,7 +521,7 @@ body {
 
 /* ---------- Course catalog ---------- */
 .catalog-section {
-  padding: 64px 0 64px;
+  padding: 40px 0 64px;
 }
 
 .section-title {
@@ -620,19 +561,19 @@ body {
 
 .featured-eyebrow {
   color: var(--taa-peach);
-  font-size: 1rem;
+  font-size: 0.95rem;
   text-transform: uppercase;
   margin-bottom: 6px;
 }
 
 .featured-card h3 {
-  font-size: 2.125rem;
+  font-size: 2.35rem;
   margin-bottom: 12px;
 }
 
 .featured-card p {
-  font-size: 1.125rem;
-  line-height: 1.5;
+  font-size: 1.08rem;
+  line-height: 1.4;
   max-width: 540px;
   margin-bottom: 18px;
 }
@@ -679,7 +620,6 @@ body {
   border: 1.5px solid var(--taa-border);
   font-size: 0.82rem;
   color: var(--taa-ink);
-  background: #F7F8F6;
 }
 
 .course-filters .form-control:focus,
@@ -705,7 +645,7 @@ body {
 }
 
 .course-filters .custom-select {
-  background: #F7F8F6 url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3e%3cpath fill='%23222' d='M0 0h10L5 8z'/%3e%3c/svg%3e") no-repeat right 12px center / 10px 8px;
+  background: #fff url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'%3e%3cpath fill='%23222' d='M0 0h10L5 8z'/%3e%3c/svg%3e") no-repeat right 12px center / 10px 8px;
 }
 
 .clear-filters {
@@ -913,7 +853,7 @@ body {
 .testimonials-section .section-title {
   color: var(--taa-blue);
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 22px;
 }
 
@@ -1099,13 +1039,13 @@ body {
 }
 
 .sponsors-section h2 {
-  font-size: 2.625rem;
+  font-size: 3rem;
   line-height: 1;
   margin-bottom: 36px;
 }
 
 .sponsors-section p {
-  font-size: 1.125rem;
+  font-size: 1.1rem;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
   max-width: 520px;
@@ -1190,7 +1130,7 @@ body {
 }
 
 .newsletter-form .custom-control-label {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.88);
   padding-top: 2px;
 }
@@ -1207,7 +1147,7 @@ body {
 }
 
 .legal-note {
-  font-size: 11px;
+  font-size: 0.68rem;
   color: rgba(255, 255, 255, 0.8);
   margin-top: 22px;
 }
@@ -1296,11 +1236,15 @@ body {
   }
 
   .site-header .nav-link {
-    padding: 0 !important;
+    padding: 0.5rem 0.6rem !important;
   }
 
   .why-title {
     font-size: 2.6rem;
+  }
+
+  .hero-carousel .carousel-item {
+    height: 530px;
   }
 }
 
@@ -1329,6 +1273,10 @@ body {
 
   .header-actions .btn {
     margin: 0 0 8px !important;
+  }
+
+  .hero-carousel .carousel-item {
+    height: 460px;
   }
 
   .why-title {
@@ -1368,10 +1316,6 @@ body {
   .footer-col {
     margin-top: 36px;
   }
-
-  .site-header .navbar .nav-link.active::after {
-    display: none;
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -1389,6 +1333,10 @@ body {
 
   .why-item:last-child {
     border-bottom: 0;
+  }
+
+  .hero-carousel .carousel-item {
+    height: 360px;
   }
 
   .section-title {
@@ -1426,10 +1374,15 @@ body {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
-  .site-header .navbar {
-    flex-direction: column;
-    gap: 25px;
+@media (max-width: 576px) {
+  .hero-carousel .carousel-item {
+    height: 220px;
+  }
+}
+
+@media (min-width: 1500px) {
+  .hero-carousel .carousel-item {
+    height: 100vh;
   }
 }
 
@@ -1495,6 +1448,8 @@ body {
   max-width: 100%;
   height: auto;
   margin-bottom: 40px;
+  background: #fff;
+  padding: 25px;
 }
 
 .course-hero-actions {
@@ -1505,15 +1460,16 @@ body {
 
 .btn-course-hero {
   margin: 10px;
-  padding: 0.55rem 1.25rem;
+  padding: 0.85rem 1.25rem;
   border: 0;
   border-radius: 4px;
   background: #fff;
   color: #2b3236;
-  font-size: 1.1rem;
+  font-size: 0.85rem;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  font-weight: 700;
 }
 
 .btn-course-hero:hover,
@@ -1539,7 +1495,7 @@ body {
 }
 
 .course-title {
-  color: var(--course-orange);
+  color: var(--taa-blue);
   font-size: 3.3rem;
   font-weight: 500;
   line-height: 1.1;
@@ -1844,7 +1800,6 @@ body {
   margin-right: -10px;
   background: url("../images/register/register-hero-leaves.jpg") center top / 577px auto no-repeat;
   text-align: center;
-  padding-top: 30px;
 }
 
 /* The photo hangs below the beige band, over the start of the form area */
@@ -1854,7 +1809,7 @@ body {
   width: 376px;
   height: 408px;
   margin-left: 80px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center bottom;
 }
 
@@ -1889,7 +1844,7 @@ body {
   content: "";
   position: absolute;
   top: 19px;
-  left: calc(50% + 100px);
+  left: calc(50% + 50px);
   width: calc(100% - 100px);
   max-width: 40px;
   height: 2px;
@@ -2344,5 +2299,488 @@ body {
 
   .register-step:not(:last-child)::after {
     display: none;
+  }
+}
+
+/* ==========================================================
+   Atlantis course pages
+   (atlantis-ambassador.html, atlantis-resources.html)
+   Reuses the course-page styles (aruba.html) and the
+   registration hero (register.html).
+   ========================================================== */
+.atl-container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.atl-content {
+  padding: 56px 0 64px;
+  color: var(--reg-text);
+}
+
+.atl-heading {
+  color: var(--taa-blue);
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 56px 0 26px;
+}
+
+.atl-content .atl-container>.atl-heading:first-child {
+  margin-top: 0;
+}
+
+.atl-content p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-bottom: 22px;
+}
+
+/* .atl-lead {
+  font-size: 0.95rem !important;
+} */
+
+/* ---------- Hero ---------- */
+.course-hero-atlantis {
+  min-height: 810px;
+  background:
+    linear-gradient(180deg, rgba(5, 18, 60, 0.25), rgba(5, 18, 60, 0.4)),
+    url("../images/atlantis/atlantis-hero.jpg") center / cover no-repeat;
+}
+
+/* Background video banner */
+.course-hero-has-video {
+  position: relative;
+  overflow: hidden;
+}
+
+.course-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* same tint as the photo version, laid over the video */
+.course-hero-has-video::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, rgba(5, 18, 60, 0.25), rgba(5, 18, 60, 0.4));
+  pointer-events: none;
+}
+
+.course-hero-has-video .container-wide {
+  position: relative;
+  z-index: 2;
+}
+
+.course-hero-has-video.video-failed .course-hero-video,
+.course-hero-has-video.video-failed .hero-video-toggle {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .course-hero-atlantis .container-wide {
+    padding-left: 92px;
+  }
+}
+
+.btn-course-hero-enroll {
+  display: inline-flex;
+  align-items: center;
+  background: var(--taa-blue);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding: 0.85rem 1.75rem;
+}
+
+.btn-course-hero-enroll svg {
+  margin-left: 12px;
+}
+
+.btn-course-hero-enroll:hover,
+.btn-course-hero-enroll:focus {
+  background: #144c7c;
+  color: #fff;
+}
+
+.btn-course-blue-dark {
+  background: var(--taa-blue);
+}
+
+.btn-course-blue-dark:hover,
+.btn-course-blue-dark:focus {
+  background: #144c7c;
+}
+
+/* ---------- Points tables ---------- */
+.points-table-wrap {
+  border: 1px solid #dfe3e4;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 32px 0 8px;
+}
+
+.points-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.points-table th {
+  background: var(--taa-teal);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 21px 28px;
+}
+
+.points-table th:first-child {
+  text-transform: uppercase;
+}
+
+.points-table td {
+  color: var(--taa-teal);
+  font-size: 1.15rem;
+  padding: 19px 28px;
+}
+
+.points-table th:last-child,
+.points-table td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.points-table td:last-child {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.points-table tbody tr:nth-child(even) {
+  background: #f4f4f4;
+}
+
+.atl-details {
+  padding-top: 0;
+}
+
+/* ---------- Resource Center ---------- */
+.resource-hero .register-hero-inner {
+  align-items: center;
+}
+
+.resource-hero-text {
+  max-width: 760px;
+  padding: 52px 0 76px;
+}
+
+.resource-title {
+  color: var(--taa-teal);
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 34px;
+}
+
+.resource-title span {
+  display: block;
+  font-size: 2.35rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.resource-hero-text p {
+  color: var(--reg-text);
+  line-height: 1.65;
+  margin-bottom: 20px;
+}
+
+.resource-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.resource-hero .register-hero-media {
+  align-self: flex-start;
+}
+
+.resource-hero .register-hero-photo {
+  margin-top: 20px;
+  height: auto;
+  object-fit: initial;
+}
+
+.resource-content {
+  padding-top: 72px;
+}
+
+/* Video */
+.resource-video {
+  position: relative;
+  max-width: 1210px;
+  margin: 32px auto 56px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #0d2f36;
+  aspect-ratio: 1908 / 1008;
+}
+
+.resource-video-el {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.resource-video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 72px;
+  height: 72px;
+  margin: -36px 0 0 -36px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(20, 28, 30, 0.6);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 4px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.resource-video-play:hover,
+.resource-video-play:focus {
+  background: rgba(20, 28, 30, 0.85);
+  transform: scale(1.06);
+}
+
+.resource-video-play:focus {
+  outline: none;
+}
+
+.resource-video-play:focus-visible {
+  outline: 3px solid var(--taa-peach);
+  outline-offset: 3px;
+}
+
+.resource-video.is-playing .resource-video-play {
+  display: none;
+}
+
+.resource-video-error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin: 0 !important;
+  text-align: center;
+  color: #fff;
+  font-size: 0.9rem !important;
+}
+
+/* Resource cards */
+.resource-cards {
+  margin-top: 36px;
+  margin-bottom: 56px;
+}
+
+.resource-card {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  color: var(--reg-text);
+  margin-bottom: 20px;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.resource-card:hover,
+.resource-card:focus {
+  color: var(--reg-text);
+  text-decoration: none;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.14);
+  transform: translateY(-2px);
+}
+
+.resource-card-icon {
+  flex: 0 0 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: #cfdee1;
+  color: var(--taa-teal);
+  margin-right: 15px;
+}
+
+.resource-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.resource-card-title {
+  display: block;
+  color: var(--taa-teal);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.resource-card-desc {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  max-width: 200px;
+}
+
+.resource-card-action {
+  color: var(--taa-teal);
+  margin-left: 12px;
+  align-self: flex-start;
+  margin-top: 24px;
+}
+
+/* CTA banner */
+.resource-cta {
+  display: flex;
+  border-radius: 24px;
+  overflow: hidden;
+  background: var(--taa-blue);
+  color: #fff;
+}
+
+.resource-cta-body {
+  flex: 0 0 58.5%;
+  padding: 40px 40px 40px;
+}
+
+.resource-cta-body h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  line-height: 1.05;
+  margin-bottom: 30px;
+}
+
+.resource-cta-body p {
+  max-width: 660px;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin-bottom: 24px;
+}
+
+.resource-cta-media {
+  flex: 1;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.resource-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #fff;
+  color: var(--taa-blue);
+  border-radius: 6px;
+  padding: 0.85rem 1.75rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.resource-cta-btn svg {
+  margin-left: 12px;
+}
+
+.resource-cta-btn:hover,
+.resource-cta-btn:focus {
+  background: var(--taa-peach);
+  color: var(--taa-teal-dark);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991.98px) {
+  .course-hero-atlantis {
+    min-height: 480px;
+  }
+
+  .atl-heading {
+    font-size: 2.4rem;
+  }
+
+  .resource-title {
+    font-size: 2.8rem;
+  }
+
+  .resource-title span {
+    font-size: 1.9rem;
+  }
+
+  .resource-cta {
+    flex-direction: column;
+  }
+
+  .resource-cta-media {
+    min-height: 240px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .course-hero-atlantis {
+    min-height: 380px;
+  }
+
+  .points-table th,
+  .points-table td {
+    padding: 14px 16px;
+  }
+
+  .points-table td {
+    font-size: 1rem;
+  }
+
+  .points-table td:last-child {
+    font-size: 1.1rem;
+  }
+
+  .resource-hero-text {
+    padding: 40px 0 48px;
+  }
+
+  .resource-video {
+    border-radius: 14px;
+  }
+
+  .resource-cta-body {
+    padding: 28px 22px;
+  }
+
+  .resource-cta-body h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .resource-card,
+  .resource-video-play {
+    transition: none;
   }
 }

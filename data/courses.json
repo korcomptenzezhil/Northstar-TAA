@@ -1,9 +1,12 @@
-
 [
   {
     "id": "xcaret-expert",
     "title": "Xcaret Expert Program",
-    "categories": ["Promotions", "New", "Hotel/Resort"],
+    "categories": [
+      "Promotions",
+      "New",
+      "Hotel/Resort"
+    ],
     "language": "en",
     "isNew": true,
     "logo": "images/logo-xcaret.png",
@@ -14,7 +17,9 @@
   {
     "id": "airfrance-klm-en",
     "title": "Air France and KLM Specialist Program",
-    "categories": ["Airlines"],
+    "categories": [
+      "Airlines"
+    ],
     "language": "en",
     "logo": "images/logo-airfrance-klm.png",
     "logoAlt": "Air France KLM",
@@ -25,7 +30,9 @@
   {
     "id": "airfrance-klm-fr",
     "title": "Le programme spécialiste Air France et KLM",
-    "categories": ["Airlines"],
+    "categories": [
+      "Airlines"
+    ],
     "language": "fr",
     "logo": "images/logo-airfrance-klm.png",
     "logoAlt": "Air France KLM",
@@ -36,7 +43,9 @@
   {
     "id": "allianz",
     "title": "Allianz Travel Protection Partners",
-    "categories": ["Services"],
+    "categories": [
+      "Services"
+    ],
     "language": "en",
     "logo": "images/logo-allianz.jpg",
     "logoAlt": "Allianz",
@@ -47,7 +56,9 @@
   {
     "id": "visit-algarve",
     "title": "Visit Algarve Specialist Program",
-    "categories": ["Destination"],
+    "categories": [
+      "Destination"
+    ],
     "language": "en",
     "logo": "images/logo-visit-algarve.png",
     "logoAlt": "Visit Algarve Portugal",
@@ -58,7 +69,9 @@
   {
     "id": "arizona",
     "title": "Arizona Specialist Program",
-    "categories": ["Destination"],
+    "categories": [
+      "Destination"
+    ],
     "language": "en",
     "logo": "images/logo-arizona.jpg",
     "logoAlt": "Arizona",
@@ -69,7 +82,10 @@
   {
     "id": "aruba",
     "title": "Aruba Certified Expert Program",
-    "categories": ["Destination", "Rewards"],
+    "categories": [
+      "Destination",
+      "Rewards"
+    ],
     "language": "en",
     "logo": "images/logo-aruba.jpg",
     "logoAlt": "Aruba",
@@ -80,100 +96,17 @@
   {
     "id": "atlantis",
     "title": "Atlantis Ambassador",
-    "categories": ["Hotel/Resort", "Luxury", "Rewards", "Tours"],
+    "categories": [
+      "Hotel/Resort",
+      "Luxury",
+      "Rewards",
+      "Tours"
+    ],
     "language": "en",
     "logo": "images/logo-atlantis.jpg",
     "logoAlt": "Atlantis Paradise Island Bahamas",
-    "url": "#",
+    "url": "atlantis-ambassador.html",
     "description": "Become empowered! Discover how to create unforgettable vacations at our unique resort destination, with unparalleled entertainment and awe-inspiring recreation.",
-    "isNew": false
-  },
-  {
-    "id": "bahamas-specialist",
-    "title": "Bahamas Specialist Program",
-    "categories": ["Destination", "New"],
-    "language": "en",
-    "logo": "images/2026_bajalogo.png",
-    "logoAlt": "Bahamas",
-    "url": "#",
-    "description": "Discover the beautiful islands of the Bahamas, explore unique experiences and learn how to create unforgettable vacations for your clients.",
-    "isNew": true
-  },
-  {
-    "id": "aat-kings",
-    "title": "AAT Kings A-LISTERS Program & Agent Academy",
-    "categories": ["Destination"],
-    "language": "en",
-    "logo": "images/AAT-Kings-LOGO.png",
-    "logoAlt": "AAT Kings A-LISTERS Program & Agent Academy",
-    "url": "#",
-    "description": "Explore Barbados, from its beautiful beaches and rich culture to its culinary experiences and exciting adventures, and help your clients plan the perfect Caribbean getaway.",
-    "isNew": false
-  },
-  {
-    "id": "algvpro",
-    "title": "ALGVPro: Travel Advisor Special Program",
-    "categories": ["Cruises", "Rewards"],
-    "language": "en",
-    "logo": "images/alg_1.png",
-    "logoAlt": "ALGVPro: Travel Advisor Special Program",
-    "url": "#",
-    "description": "Learn about Carnival Cruise Line experiences, destinations, onboard entertainment and activities to help your clients choose their ideal cruise vacation.",
-    "isNew": false
-  },
-  {
-    "id": "audley",
-    "title": "Audley",
-    "categories": ["Destination", "Tours"],
-    "language": "en",
-    "logo": "images/Audley_Travel_logo_320-142_1.png",
-    "logoAlt": "Audley",
-    "url": "#",
-    "description": "Discover Costa Rica's natural beauty, wildlife, adventure activities and eco-tourism experiences to create memorable travel experiences for your clients.",
-    "isNew": false
-  },
-  {
-    "id": "azamara",
-    "title": "Azamara World Academy",
-    "categories": ["Hotel/Resort", "Tours", "New"],
-    "language": "en",
-    "logo": "images/AZA-CRUISES_LOGO_TAA.png",
-    "logoAlt": "Azamara World Academy",
-    "url": "#",
-    "description": "Explore Disney vacation experiences, resort options, attractions and entertainment to help families plan magical holidays.",
-    "isNew": true
-  },
-  {
-    "id": "la-paz",
-    "title": "La Paz Specialist Program",
-    "categories": ["Destination", "Luxury"],
-    "language": "en",
-    "logo": "images/lapaz.png",
-    "logoAlt": "La Paz Specialist Program",
-    "url": "#",
-    "description": "Learn about Hawaii's islands, beaches, cultural heritage and unique experiences to help your clients plan an unforgettable island escape.",
-    "isNew": false
-  },
-  {
-    "id": "lopesan",
-    "title": "Lopesan Specialist Program",
-    "categories": ["Destination", "Hotel/Resort"],
-    "language": "en",
-    "logo": "images/Lopesan_logo.png",
-    "logoAlt": "Lopesan Specialist Program",
-    "url": "#",
-    "description": "Discover Jamaica's beaches, resorts, music, culture and adventure experiences to recommend the perfect Caribbean vacation.",
-    "isNew": false
-  },
-  {
-    "id": "greece",
-    "title": "Greece Specialist Program",
-    "categories": ["Cruises", "Luxury", "Rewards"],
-    "language": "en",
-    "logo": "images/greek-logo.png",
-    "logoAlt": "Greece Specialist Program",
-    "url": "#",
-    "description": "Learn about Royal Caribbean ships, destinations, onboard activities and cruise experiences to help clients find their ideal sailing.",
     "isNew": false
   }
 ]
