@@ -233,7 +233,7 @@ a:hover {
 
 /* ---------- Hero ---------- */
 .hero-carousel {
-  height: var(--hero-carousel-height, 600px);
+  /* height: var(--hero-carousel-height, 600px); */
   overflow: hidden;
 }
 
