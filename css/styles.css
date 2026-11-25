@@ -1432,7 +1432,8 @@ a:hover {
   min-height: 706px;
   display: flex;
   align-items: center;
-  padding: 120px 0;
+  flex-direction: column;
+  padding: 0;
   background:
     linear-gradient(180deg, rgba(5, 18, 60, 0.35), rgba(5, 18, 60, 0.5)),
     url("../images/hero.jpg") center / cover no-repeat;
@@ -1717,7 +1718,7 @@ a:hover {
 @media (max-width: 991.98px) {
   .course-hero {
     min-height: 480px;
-    padding: 80px 0;
+    padding: 0;
   }
 
   .course-title {
@@ -1729,7 +1730,7 @@ a:hover {
 @media (max-width: 575.98px) {
   .course-hero {
     min-height: 380px;
-    padding: 56px 0;
+    padding: 0;
   }
 
   .course-hero-logo {
@@ -2341,38 +2342,32 @@ a:hover {
   font-size: 0.95rem !important;
 } */
 
-/* ---------- Hero ---------- */
+/* ---------- Atlantis course hero ---------- */
 .course-hero-atlantis {
-  min-height: 810px;
-  background:
-    linear-gradient(180deg, rgba(5, 18, 60, 0.25), rgba(5, 18, 60, 0.4)),
-    url("../images/atlantis/atlantis-hero.jpg") center / cover no-repeat;
+  background: #fff;
 }
 
 /* Background video banner */
 .course-hero-has-video {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .course-hero-video {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 0;
 }
 
-/* same tint as the photo version, laid over the video */
+/* Same tint as the photo version, laid over the video */
 .course-hero-has-video::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 1;
   background: linear-gradient(180deg, rgba(5, 18, 60, 0.25), rgba(5, 18, 60, 0.4));
   pointer-events: none;
@@ -2388,9 +2383,29 @@ a:hover {
   display: none;
 }
 
+/* Desktop: JavaScript sets the exact remaining viewport height */
 @media (min-width: 1200px) {
+  .course-hero-has-video {
+    box-sizing: border-box;
+    min-height: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .course-hero-atlantis .container-wide {
     padding-left: 92px;
+  }
+}
+
+@media (min-width: 768px) {
+  .course-hero-video {
+    object-fit: cover;
+    position: absolute;
+  }
+
+  .course-hero {
+    flex-direction: row;
+    padding: 120px 0;
   }
 }
 
@@ -2774,6 +2789,31 @@ a:hover {
 
   .resource-cta-body h2 {
     font-size: 2rem;
+  }
+
+  .course-hero-has-video .container-wide {
+    background: #fcfcfc;
+    padding: 25px;
+  }
+
+  .course-hero-logo {
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+    width: 200px;
+  }
+
+  .course-hero-has-video::after {
+    background-color: #fcfcfc;
+    z-index: 1;
+  }
+
+  .course-hero-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .course-hero-has-video::after {
+    background-image: none;
   }
 }
 
