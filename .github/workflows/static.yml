@@ -1,4 +1,3 @@
-
 name: Deploy static content to Pages
 
 on:
@@ -35,6 +34,10 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./
+
+      # Wait for GitHub artifact indexing
+      - name: Wait for artifact listing
+        run: sleep 10
 
       - name: Deploy to GitHub Pages
         id: deployment
