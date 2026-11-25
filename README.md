@@ -5,7 +5,7 @@ Travel Agent Academy – Website Demo
 
 ## Live Demo
 
-🚀 [View Website Demo](https://korcomptenzhil.github.io/Northstar-TAA/)
+🚀 [View Website Demo](https://korcomptenzezhil.github.io/Northstar-TAA/)
 
 ## Technologies Used
 - HTML5
