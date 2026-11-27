@@ -2730,6 +2730,69 @@ a:hover {
   color: var(--taa-teal-dark);
 }
 
+.user-account-dropdown {
+  position: relative;
+}
+
+.user-account-dropdown .dropdown-menu {
+  min-width: 220px;
+  margin-top: 12px;
+  padding: 8px;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.user-account-dropdown .dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.user-account-dropdown .dropdown-item:hover {
+  background-color: #f5f7f8;
+}
+
+.user-profile-item {
+  gap: 10px;
+}
+
+.user-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #e8f4f0;
+  color: #16845f;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.user-profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.user-profile-info strong {
+  color: #222;
+  font-size: 14px;
+}
+
+.user-profile-info small {
+  color: #777;
+  font-size: 12px;
+}
+
+.user-account-dropdown .logout-item {
+  color: #dc3545;
+}
+
 /* ---------- Responsive ---------- */
 @media (max-width: 991.98px) {
   .course-hero-atlantis {
